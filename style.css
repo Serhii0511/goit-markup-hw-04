@@ -19,6 +19,9 @@ header {
 }
 .page-header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container.container {
     width: 1158px;
@@ -50,6 +53,20 @@ img {
     gap: 40px;
     padding: 24px 0 24px 0;
     display: flex;
+    position: relative;
+    color: #404bbf;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.nav-menu::after {
+    content: hello;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
 }
 
 .button:hover,
@@ -109,15 +126,11 @@ img {
     background-image: url(./images/people-office.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient (to bottom,
-            rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),
-            url(https://github.com/Serhii0511/goit-markup-hw-04/blob/main/images/people-office.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(https://github.com/Serhii0511/goit-markup-hw-04/blob/main/images/people-office.jpg);
+    max-width: 1440px;
+    background-position: center;
     }
-
-.but {
-    min-width: 169px;
-        height: 56px;
-}
 
 .button {
     font-weight: 500;
@@ -135,6 +148,7 @@ img {
     border-radius: 4px;
     cursor: pointer;
     margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .my-work {
@@ -259,12 +273,35 @@ img {
 }
 .portfolio {
     padding: 120px 0 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+.text-port {
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .my-portfolio {
     flex-wrap: wrap;
     display: flex;
     gap: 24px;
     row-gap: 48px;
+}
+.port {
+    box-shadow: зі значенням 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.port:hover {
+    transform: translateY(0%);
 }
 .portfol {
     padding: 32px 16px;
@@ -331,6 +368,10 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
 .footer .container {
     display: flex;
     gap: 120px;
+    align-items: baseline;
+}
+.logo-p {
+    margin-right: 120px
 }
 .soc {
     font-family: "Roboto", sans-serif;
@@ -339,4 +380,63 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #fff;
+        margin-bottom: 16px;
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+.icon-li {
+    width: 40px;
+    height: 40px;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    fill: #f4f4fd;
+}
+.social-link {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-link:hover,
+.social-link:focus {
+    background-color: #404bbf;
+}
+svg {
+    width: 16px;
+    height: 16px;
+}
+.icons-footer {
+    display: flex;
+    gap: 16px;
+}
+.icon-li-footer {
+    width: 40px;
+    height: 40px;
+}
+.social-link-footer {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-link-footer:hover,
+.social-link-footer:focus {
+    background-color: #31d0aa;
+}
+.icon-footer {
+    width: 24px;
+    height: 24px;
+    fill: #f4f4fd;
 }
