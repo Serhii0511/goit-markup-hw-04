@@ -324,12 +324,12 @@ img {
     gap: 24px;
     row-gap: 48px;
 }
-.port {
-    box-shadow: зі значенням 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .port:hover {
+    box-shadow: зі значенням 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     transform: translateY(0%);
+}
+.port {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfol {
     padding: 32px 16px;
@@ -419,11 +419,6 @@ h1, h2, h3, h4, h5, h6, p, ul, a {
     width: 40px;
     height: 40px;
 }
-.icon {
-    width: 40px;
-    height: 40px;
-    fill: #f4f4fd;
-}
 .social-link {
     width: 100%;
     height: 100%;
@@ -458,13 +453,12 @@ svg {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link-footer:hover,
 .social-link-footer:focus {
     background-color: #31d0aa;
 }
 .icon-footer {
-    width: 24px;
-    height: 24px;
     fill: #f4f4fd;
 }
